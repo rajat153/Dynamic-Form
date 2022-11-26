@@ -1,0 +1,28 @@
+
+
+
+.App{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .navbar-brand .isactive{
+  color:red;
+} */
+.navbar-brand > button{
+  color:#fff;
+  width:100px;
+  height:40px;
+  border-radius:20px 20px ;
+  margin:5px;
+  font-size: medium;
+  border: none;
+  background-color: blue;
+}
+
+.navbar-brand > button:hover{
+  background-color: rgba(0,0,255,0.7);
+
+}
