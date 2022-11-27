@@ -30,11 +30,9 @@ body {
 }
 
 .formtable button {
-    
-    border:none;
-    padding:5px;
-    border-radius: 5px;
-    background-color: blue;
-    color:#fff;
-    
-  }
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: blue;
+  color: #fff;
+}

@@ -1,0 +1,43 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  .formPage {
+    margin: 40px 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .formPage > form {
+    width: 40%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .formPage  h1{
+    color:rgb(150, 31, 31);
+  }
+  .formtable input {
+    margin: 5px;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  
+  form button {
+      border:none;
+      padding:5px;
+      border-radius: 5px;
+      background-color: blue;
+      color:#fff;
+      
+    }

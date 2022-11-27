@@ -20,7 +20,6 @@ function CreateFormPage(props) {
         })
         console.log(res)
         if(res.status===200){
-
             res = await res.json()
             alert('Form created successfully')
             console.log(res)
@@ -62,6 +61,9 @@ function CreateFormPage(props) {
   const FormSubmit = (e) => {
     e.preventDefault();
     postData(formfields)
+    setFormfields([])
+    setHeading({ value: "Title Change",
+    edit: false,})
   };
 
   console.log(props.vv);
@@ -116,8 +118,7 @@ function CreateFormPage(props) {
         </table>
         {  formfields.length > 0 ? <button>Save to Database</button>:null}
       </form>
-      <div><CreateFromComponent onsave={handlesave} /></div>
-      
+      <div><CreateFromComponent onsave={handlesave} /></div>  
     </div>
   );
 }

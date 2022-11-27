@@ -1,5 +1,6 @@
 import React ,{useState,useEffect}from 'react'
 import {useParams} from 'react-router-dom'
+import './ViewForm.css'
 
 function ViewForm() {
     const {id} = useParams()
@@ -8,8 +9,6 @@ function ViewForm() {
 
     useEffect(()=>{
         fff()
-
-
     },[])
 
     const fff = async()=>{
@@ -28,7 +27,7 @@ function ViewForm() {
   return (
     <div className="formPage">
     <form>
-        <h1>{val.form_title}</h1>
+        <h1>{JSON.parse(val.form_title)}</h1>
         <table className="formtable">
           {val.form_fields.map((field) => {
             return (
@@ -49,6 +48,7 @@ function ViewForm() {
             );
           })}
         </table>
+        <button>Save</button>
     </form>  
   </div>
   

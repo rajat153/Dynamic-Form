@@ -1,6 +1,4 @@
 
-
-
 .App{
   display: flex;
   flex-direction: column;
@@ -8,9 +6,6 @@
   align-items: center;
 }
 
-/* .navbar-brand .isactive{
-  color:red;
-} */
 .navbar-brand > button{
   color:#fff;
   width:100px;

@@ -1,0 +1,20 @@
+.alltitle{
+    margin:30px 10px;
+}
+.alltitle h2{
+    text-align: center;
+    margin:10px 0 ;
+  
+}
+.alltitle div{
+    margin:10px;
+}
+
+.alltitle button{
+    margin:0 10px;
+    border-radius:5px;
+    padding:5px;
+    border: none;
+    background-color:blue;
+    color:#fff
+}

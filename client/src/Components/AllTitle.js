@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
-import ViewForm from "./ViewForm";
+import './AllTitle.css'
+
 
 
 function AllTitle() {
@@ -33,24 +34,17 @@ function AllTitle() {
     console.log("ffd");
   };
 
-  const filterForm = (id) =>{
-    data.filter((form)=>{
-        return form.id !== id
-
-    })
-  }
-
   console.log(data);
   return (
-    <div>
+    <div className='alltitle'>
       <h2>All Titles</h2>
       <div>
         {data.map((item) => {
           return (
-            <>
-              <li key={uuidv4()}>
-                {item.id}.{item.form_title}
-              </li>
+            <div>
+              <span key={uuidv4()}>
+                {item.id}.{JSON.parse(item.form_title)}
+              </span>
               <button
                 onClick={() => {
                   seeForm(item.id);
@@ -58,11 +52,10 @@ function AllTitle() {
               >
                 View
               </button>
-            </>
+            </div>
           );
         })}
       </div>
-      <ViewForm ff={filterForm} />
     </div>
   );
 }

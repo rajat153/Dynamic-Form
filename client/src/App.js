@@ -1,9 +1,7 @@
-import { Routes, Route, NavLink, Outlet } from "react-router-dom";
+import { Routes, Route, NavLink} from "react-router-dom";
 import React from "react";
 import ViewForm from "./Components/ViewForm";
 import AllTitle from "./Components/AllTitle";
-import Form from "./Components/Form";
-// import CreateFromComponent from "./Components/CreateFromComponent";
 import "./App.css";
 import CreateFormPage from "./Components/CreateFormPage";
 
@@ -22,7 +20,6 @@ function App() {
         <Route path="/form/create" element={<CreateFormPage />} />
         <Route path="/form/:id" element={<ViewForm />} />
       </Routes>
-      {/* <Outlet/> */}
     </div>
   );
 }
