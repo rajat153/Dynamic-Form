@@ -8,10 +8,10 @@ function ViewForm() {
     const [val,setVal] = useState(null)
 
     useEffect(()=>{
-        fff()
+        getData()
     },[])
 
-    const fff = async()=>{
+    const getData = async()=>{
         const res = await fetch(`http://localhost:4040/form/${id}`)
         const vvv = await res.json()
         console.log(vvv.rows)
@@ -19,7 +19,6 @@ function ViewForm() {
 
     }
 
-    console.log(val)
   if(!val){
     return null
   }

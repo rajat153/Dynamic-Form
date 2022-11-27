@@ -18,11 +18,9 @@ function CreateFormPage(props) {
             headers:{"Content-Type":"application/json"},
             body: JSON.stringify({formfields, value: heading.value}),    
         })
-        console.log(res)
         if(res.status===200){
             res = await res.json()
             alert('Form created successfully')
-            console.log(res)
         }
     }catch(err){
         alert('Failed to create a form')
@@ -31,7 +29,6 @@ function CreateFormPage(props) {
   }
 
   const updateHeading = (e) => {
-    console.log("value updates");
     setHeading((prev) => {
       return { ...prev, value: e.target.value };
     });
@@ -42,7 +39,6 @@ function CreateFormPage(props) {
       console.log(prev);
       return { ...prev, edit: !prev.edit };
     });
-    console.log("change title");
   };
 
   const onDelete = (id) => {
@@ -52,7 +48,6 @@ function CreateFormPage(props) {
   const handlesave = (fieldData) => {
     if (formfields.length < 20) {
       setFormfields([...formfields, { ...fieldData, id: Date.now() }]);
-      
     } else {
       alert("Limit exceed");
     }

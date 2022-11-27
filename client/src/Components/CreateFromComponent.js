@@ -9,8 +9,6 @@ function CreateFromComponent(props) {
       return { ...prev, [e.target.name]: e.target.value };
     });
   };
-  console.log(attr);
-
   const handleClick =()=>{
     props.onsave(attr) 
   }

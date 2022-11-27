@@ -10,14 +10,11 @@ function AllTitle() {
 
   const [data, setData] = useState([]);
   
-
   const viewForm = async () => {
     try {
       let res = await fetch("http://localhost:4040/");
-      console.log(res);
       if (res.status === 200) {
         res = await res.json();
-        console.log(res.rows);
         setData(res.rows);
       }
     } catch (err) {
@@ -31,10 +28,7 @@ function AllTitle() {
 
   const seeForm = (id) => {
     navigate(`/form/${id}`);
-    console.log("ffd");
   };
-
-  console.log(data);
   return (
     <div className='alltitle'>
       <h2>All Titles</h2>
